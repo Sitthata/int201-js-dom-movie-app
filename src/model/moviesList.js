@@ -17,7 +17,11 @@ export class MovieManager {
   }
 
   sortByRating() {
-    return this.movies.sort((a, b) => a.rating - b.rating);
+    return this.movies.sort((a, b) => b.rating - a.rating);
+  }
+
+  sortByName() {
+    return this.movies.sort((a, b) => a.title.localeCompare(b.title));
   }
 
   findMovie(id) {
